@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "494067344520",
+    "firebase_url": "https://react-native-test-fb.firebaseio.com",
+    "project_id": "react-native-test-fb",
+    "storage_bucket": "react-native-test-fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494067344520:android:2ae524b4840ac560",
+        "android_client_info": {
+          "package_name": "com.reactnativetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494067344520-i9kukrvgbkho6qlhd5iknivseli1lqpa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhqCFQaucya9jS75pbJKt6tXcPwKilwnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494067344520-i9kukrvgbkho6qlhd5iknivseli1lqpa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

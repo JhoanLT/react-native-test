@@ -7,8 +7,10 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, View, Button, Text} from 'react-native';
+import {Platform, StyleSheet, View, Text} from 'react-native';
+import FirebaseManeger from './services/FirebaseManager';
 import firebase from 'react-native-firebase';
+import { RemoteMessage } from 'react-native-firebase';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -19,15 +21,11 @@ const instructions = Platform.select({
 
 export default class App extends Component {
 
-  test(){
-    const fcmToken = firebase.messaging().getToken();
-    if (fcmToken) {
-        console.log(fcmToken);
-        // user has a device token
-    } else {
-      console.log('Token no encontrado!');
-        // user doesn't have a device token yet
-    }
+  componentDidMount(){
+    this.notificationListener = firebase.notifications().onNotification(notification => {
+      const {title, body, data} = notification;
+      alert('Notificación recibida');
+    }); 
   }
 
   render() {
@@ -36,7 +34,7 @@ export default class App extends Component {
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <Button onPress={() => this.test()}  title='test'></Button>
+        <FirebaseManeger/>
       </View>
     );
   }
